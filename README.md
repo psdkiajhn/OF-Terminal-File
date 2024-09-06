@@ -64,7 +64,7 @@ just use `-s` or `--search`, message tell you every thing❗
 ## Format
 you want to see all supported extension❓
 use `-f` or `--format` and just this
-You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported%20extension)
+You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported-extension)
 
 
 
