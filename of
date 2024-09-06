@@ -142,7 +142,7 @@ try:
   parser.add_argument('-e', '--extension', action='store_true', help="sort files by extenstion instead of type!\n")
   parser.add_argument('-f', '--formats', action='store_true', help="list of all supported format\n")
   parser.add_argument('-a', '--add', action='store_true', help="add more format in supported format\n")
-  parser.add_argument('-s', '--search', help="search for formats to see is supported or not, for several format you can use \",\" between them, e.g png,jpg\n")
+  parser.add_argument('-s', '--search', action='store_true', help="search for formats to see is supported or not, for several format you can use \",\" between them, e.g png,jpg\n")
   parser.add_argument('-r', '--reset', action='store_true', help='reset types file, delete all custome extensions')
 
   args = parser.parse_args()
@@ -163,9 +163,9 @@ try:
     for i in exs:
       try: 
         key, value = i.split(":")
-        result_dict[key] = value
+        result_dict[key.strip()] = value.strip()
       except:
-        print(f"an error for {i} showed up!")
+        print(f"an error for {i.strip()} showed up!")
     ftl.update(result_dict)
     with open('/usr/OF/file_types.json', 'w') as file:
       json.dump(ftl, file)
@@ -174,12 +174,14 @@ try:
 
 
   if args.search:
-    exs = args.search.split(',')
+    print("For searching one just input it")
+    print("For two write \",\" between them")
+    exs = input(">>>").strip().split(',')
     for i in exs:
-      if ftl.get(i,'1') == '1':
-        print(f"Format {i} is not supported")
+      if ftl.get(i.strip(),'1') == '1':
+        print(f"Format {i.strip()} is not supported")
       else:
-        print(f"Format {i} supported and it sorted in {ftl.get(i)} set")
+        print(f"Format {i.strip()} supported and it sorted in {ftl.get(i.strip())} set")
     exit()
 
   if args.formats:
@@ -215,6 +217,9 @@ try:
       if not args.extension:
         ex = fn[i][1]
         dn = ftl.get(ex.lower(), 'unknown')
+        if dn == 'unknown':
+          print(f"extension {ex} is not supported, please add it using \"sudo of -a\"")
+          continue
         if not os.path.isdir(dn) and not args.NO_NEW_FOLDER:
           os.mkdir(dn)
         if os.path.isdir(dn):
