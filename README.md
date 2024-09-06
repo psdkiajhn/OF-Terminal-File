@@ -13,10 +13,6 @@ This app can oraganize your file in two was:
 > Use sudo when you want to use `-a` or `-r`
 > if you see a sudo error without using any argument, it mean `file_types.json` in `/usr/OF/` is deleted, you must to use sudo to make it again
 
-> [!IMPORTANT]
-> U can make a folder with a type or extension of files you want to organize
-> TO make other files untouched
-
 > [!WARNING]
 > "Please use sudo" 🟰 command need to change something in /usr/ folder and need sudo
 > "You can't use verbose and quiet together" 🟰 using `-v` and `-q` in the same command
