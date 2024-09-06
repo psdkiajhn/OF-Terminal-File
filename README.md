@@ -1,5 +1,8 @@
 # O.F - File Organizer For Linux
 
+### [see it in russian](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/russian.md)
+### [посмотри на русском](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/russian.md)
+
 Do you have problem to organize your files❓ WITH O.F, NO MORE❗😃
 Installtion is so easy, Even a Kid 🧒 can do it! You can see it from [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#installtion)
 This app can oraganize your file in two was:
