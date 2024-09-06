@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+echo -ne "Welcome to O.F installer\n"
+sudo rm -r /usr/OF
+echo -ne '#####                     (33%)\r'
+sleep 1
+sudo rm /usr/local/bin/of
+echo -ne '#############             (66%)\r'
+sleep 1
+sudo exec $SHELL
+echo -ne '#######################   (100%)\r'
+echo -ne '\n'
+echo "Uninstalltion compeleted!"
+echo "Have a nice day :)"

@@ -1,0 +1,234 @@
+#! /usr/bin/env python3
+
+ft = {
+    'bat': 'executable',
+    'exe': 'executable',
+    'msi': 'executable',
+    'sh':  'executable',
+    'vb':  'executable',
+    'vbs': 'executable',
+    'wsf': 'executable',
+    'apk': 'executable',
+    'ttf': 'font',
+    'otf': 'font',
+    'fnt': 'font',
+    'log': 'text',
+    'txt': 'text',
+    'tex': 'text',
+    'rtf': 'text',
+    'png': 'image',
+    'bmp': 'image',
+    'gif': 'image',
+    'ico': 'image',
+   'jpeg': 'image',
+    'svg': 'image',
+    'tif': 'image',
+    'scr': 'image',
+   'tiff': 'image',
+    'jpg': 'image',
+   'webp': 'image',
+    'mp4': 'video',
+    'mkv': 'video',
+    'm4v': 'video',
+    'mpg': 'video',
+   'mpeg': 'video',
+    'mov': 'video',
+    'swf': 'video',
+    'vob': 'video',
+   'webm': 'video',
+    'wmv': 'video',
+    'mp3': 'audio',
+    'aif': 'audio',
+    'cda': 'audio',
+    'mpa': 'audio',
+    'ogg': 'audio',
+    'wma': 'audio',
+    'wav': 'audio',
+    'bak': 'backup',
+    'cab': 'windows',
+    'cfg': 'windows',
+    'cur': 'windows',
+    'dll': 'windows',
+    'cpl': 'windows',
+    'drv': 'windows',
+    'dmp': 'windows',
+    'ini': 'windows',
+    'ink': 'windows',
+    'sys': 'windows',
+    'tmp': 'windows',
+    'icns': 'mac',
+    '7z':  'copressed',
+    'rar': 'compressed',
+    'zip': 'compressed',
+ 'tar.gz': 'compressed',
+    'tgz': 'compressed',
+    'tbz': 'compressed',
+    'txz': 'compressed',
+   'tzst': 'compressed',
+ 'tar.br': 'compressed',
+'tar.bz2': 'compressed',
+    'z':   'compressed',
+    'arj': 'compressed',
+ 'tar.xz': 'compressed',
+'tar.zst': 'compressed',
+    'deb': 'package',
+    'pkg': 'package',
+    'rpm': 'package',
+    'dmg': 'disc image',
+    'iso': 'disc image',
+  'toast': 'disc image',
+    'vcd': 'disc image',
+    'img': 'disc image',
+    'csv': 'dataset',
+    'dat': 'dataset',
+    'sql': 'dataset',
+    'db':  'dataset',
+    'dbf': 'dataset',
+    'mdb': 'dataset', 
+    'sav': 'dataset',
+    'pdf': 'document',
+    'doc': 'document',
+    'wpd': 'document',
+   'docx': 'document',
+   'pptx': 'document',
+    'ppt': 'document',
+    'pps': 'document',
+    'odp': 'document',
+    'xls': 'document',
+   'xlsm': 'document',
+   'xlsx': 'document',
+    'xml': 'programing',
+    'py':  'programing',
+    'cpp': 'programing',
+   'java': 'programing',
+    'go':  'programing',
+   'html': 'programing',
+    'css': 'programing',
+    'cs':  'programing',
+    'js':  'programing',
+    'jsp': 'programing',
+    'php': 'programing',
+    'htm': 'programing',
+  'xhtml': 'programing',
+    'jar': 'programing',
+    'c':   'programing',
+  'class': 'programing',
+    'h':   'programing',
+    'cgi': 'programing',
+    'pl':  'programing',
+  'swift': 'programing',
+}
+
+import os
+import argparse
+import json
+
+try:
+  if not os.path.exists('/usr/OF/file_types.json'):
+    with open('/usr/OF/file_types.json', 'w') as file:
+      json.dump(ft, file)
+    print('\"/usr/OF/file_types.json\" file has been deleted!\nWe have to make it again, so all custome type will be removed!\nYou can add them again by using the \"-a\" argument!')
+    exit()
+
+  with open('/usr/OF/file_types.json', 'r') as file:
+      ftl = json.load(file)
+
+  parser = argparse.ArgumentParser(description="This app will help you to organize your files")
+
+  parser.add_argument('-n', '--NO-NEW-FOLDER', action='store_true', help="Don't make a new folder for files\n")
+  parser.add_argument('-d', '--directory', help="Set directory for organizing (default = Current directory)\n")
+  parser.add_argument('-v', '--verbose', action='store_true', help="Enable verbose mode\n")
+  parser.add_argument('-q', '--quiet', action='store_true', help="Enable quiet mode\n")
+  parser.add_argument('-e', '--extension', action='store_true', help="sort files by extenstion instead of type!\n")
+  parser.add_argument('-f', '--formats', action='store_true', help="list of all supported format\n")
+  parser.add_argument('-a', '--add', action='store_true', help="add more format in supported format\n")
+  parser.add_argument('-s', '--search', help="search for formats to see is supported or not, for several format you can use \",\" between them, e.g png,jpg\n")
+  parser.add_argument('-r', '--reset', action='store_true', help='reset types file, delete all custome extensions')
+
+  args = parser.parse_args()
+
+  if args.reset:
+    with open('/usr/OF/file_types.json', 'w') as file:
+      json.dump(ft, file)
+    print("Done!")
+    exit()
+
+  if args.add:
+    print("you can add new extensions for organization")
+    print("for doing that you can input it like that:")
+    print("e.g: png:image, jpg:image")
+    new = input(">>>")
+    result_dict = {}
+    exs = new.strip().split(',')
+    for i in exs:
+      try: 
+        key, value = i.split(":")
+        result_dict[key] = value
+      except:
+        print(f"an error for {i} showed up!")
+    ftl.update(result_dict)
+    with open('/usr/OF/file_types.json', 'w') as file:
+      json.dump(ftl, file)
+    print("Done!")
+    exit()
+
+
+  if args.search:
+    exs = args.search.split(',')
+    for i in exs:
+      if ftl.get(i,'1') == '1':
+        print(f"Format {i} is not supported")
+      else:
+        print(f"Format {i} supported and it sorted in {ftl.get(i)} set")
+    exit()
+
+  if args.formats:
+    for key, value in ftl.items():
+      print(f"{key} -> {value}")
+    exit()
+
+  if args.directory:
+    os.chdir(args.directory)
+
+  fn = []
+
+  if args.verbose and args.quiet:
+      print("You can't use \"Verbose\" and \"Quiet\" together!")
+      exit()
+
+
+  for i in os.listdir():
+      if os.path.isdir(i):
+          continue
+      else :
+          file_name = list(i.rsplit('.', 1))
+          if len(file_name) == 1:
+            file_name.append('no_ex')
+          fn.append(file_name)
+
+  for i in range(len(fn)):
+      if args.verbose:
+        if fn[i][1] != 'no_ex':
+          print(f"organizing the {fn[i][0]}.{fn[i][1]}")
+        else:
+          print(f"organizing the {fn[i][0]}")
+      if not args.extension:
+        ex = fn[i][1]
+        dn = ftl.get(ex.lower(), 'unknown')
+        if not os.path.isdir(dn) and not args.NO_NEW_FOLDER:
+          os.mkdir(dn)
+        if os.path.isdir(dn):
+          try: os.replace(f"{fn[i][0]}.{fn[i][1]}", f'{dn}/{fn[i][0]}.{fn[i][1]}')
+          except: os.replace(f"{fn[i][0]}", f'{dn}/{fn[i][0]}')
+      else:
+        if not os.path.isdir(fn[i][1]) and not args.NO_NEW_FOLDER:
+          os.mkdir(fn[i][1])
+        if os.path.isdir(fn[i][1]):
+          try: os.replace(f"{fn[i][0]}.{fn[i][1]}", f'{fn[i][1]}/{fn[i][0]}.{fn[i][1]}')
+          except: os.replace(f"{fn[i][0]}", f'{fn[i][1]}/{fn[i][0]}')
+
+  if not args.quiet:
+    print("\n\n==============\nDone!\n==============\n\n")
+except PermissionError:
+  print("Permission Error:")
+  print("Please use sudo")

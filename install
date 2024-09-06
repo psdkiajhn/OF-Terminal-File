@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+
+echo -ne "Welcome to O.F installer\n"
+sudo cp of /usr/local/bin/
+echo -ne '#####                     (33%)\r'
+sleep 1
+sudo mkdir /usr/OF/
+echo -ne '#############             (66%)\r'
+sleep 1
+sudo cp file_types.json /usr/OF/
+sudo exec $SHELL
+echo -ne '#######################   (100%)\r'
+echo -ne '\n'
+echo "Installtion compeleted!"
+echo "Have a nice organiztion :)"
