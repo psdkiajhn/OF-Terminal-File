@@ -10,11 +10,29 @@ This app can oraganize your file in two was:
 > Python is needed, so install it
 
 > [!TIP]
-> Use sudo when you want to add a new extension type
+> Use sudo when you want to use `-a` or `-r`
+> if you see a sudo error without using any argument, it mean `file_types.json` in `/usr/OF/` is deleted, you must to use sudo to make it again
 
 > [!IMPORTANT]
 > U can make a folder with a type or extension of files you want to organize
 > TO make other files untouched
+
+> [!WARNING]
+> "Please use sudo" 🟰 command need to change something in /usr/ folder and need sudo
+> "You can't use verbose and quiet together" 🟰 using `-v` and `-q` in the same command
+> "'/usr/OF/file_types.json' file has been deleted!" 🟰 type file has been deleted and OF must to make it again
+
+# Installtion
+
+just install git and run these commands:
+```
+
+  git clone https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer.git
+  cd OF-Linux-Terminal-File-Organizer
+  ./install
+
+```
+then it's in your terminal, enjoy❗😃
 
 # Usage
 after install, of command will add to your terminal
@@ -219,19 +237,6 @@ No problem, just use `-r` or `--reset` and boom, your types have been reseted❗
   pl -> programing
   swift -> programing
 ```
-
-
-# Installtion
-
-just install git and run these commands:
-```
-
-  git clone https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer.git
-  cd OF-Linux-Terminal-File-Organizer
-  ./install
-
-```
-then it's in your terminal, enjoy❗😃
 
 # Uninstalltion
 
