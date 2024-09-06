@@ -4,7 +4,7 @@ Do you have problem to organize your files❓ WITH O.F, NO MORE❗😃
 Installtion is so easy, Even a Kid 🧒 can do it! You can see it from [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#installtion)
 This app can oraganize your file in two was:
 - Sorting by type (Lot's of extension type are built in, but you can add or change them😄)
-- Sorting by extensions
+- Sorting by extensions <br />
 You Can Use Our [site](http://of-terminal.line.pm) now 😃
 
 
