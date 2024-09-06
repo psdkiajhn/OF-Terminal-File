@@ -17,6 +17,7 @@ This app can oraganize your file in two was:
 > "Please use sudo" 🟰 command need to change something in /usr/ folder and need sudo <br />
 > "You can't use verbose and quiet together" 🟰 using `-v` and `-q` in the same command <br />
 > "'/usr/OF/file_types.json' file has been deleted!" 🟰 type file has been deleted and OF must to make it again <br />
+> "Needed file does not exist" 🟰 installtion files are deleted or have a problem, download the repo again <br />
 
 # Installtion
 
