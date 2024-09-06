@@ -21,7 +21,7 @@ after install, of command will add to your terminal
 you can use it with 10 argument or use it single:
 ```
   of -n | of --NO-NEW-FOLDER #*OF will not organize file with no Sorting Folder*
-  of -h | of --help #*OF help page*
+  of -h | of --help #*show help page*
   of -d | of --directory #*Oraganizing another directory instead of current directory*
   of -v | of --verbose #*OF will say everything*
   of -q | of --quiet #*OF will don't say anything*
@@ -53,6 +53,30 @@ you don't need to cd for going to that directory, just use `-d` or `--directory`
   of -d="/usr/my\ files"
 ```
 
+## Extension
+if you want to sort your files using extention instead of their type,
+you can use `-e` or `--extension`
+This is an example:
+with -e:
+```
+  before:       |    after:
+  🖼️test1.png   |    📁png
+  🖼️tset2.jpg   |    📁jpg
+  🎥test.mp4    |    📁mp4
+```
+without -e:
+```
+  before:       |    after:
+  🖼️test1.png   |    📁image
+  🖼️tset2.jpg   |    📁video
+  🎥test.mp4    |
+```
+
+## Format
+you want to see all supported extension❓
+use `-f` or `--format` and just this
+You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported-extension)
+
 ## Verbose & Quiet
 if you want to know every thing use `-v` or `--verbose`
 and if you want to don't get any thing and just organize use `-q` or `--quiet`
@@ -61,14 +85,20 @@ and if you want to don't get any thing and just organize use `-q` or `--quiet`
 you don't know a extenstion is supported or not❓
 just use `-s` or `--search`, message tell you every thing❗
 
-## Format
-you want to see all supported extension❓
-use `-f` or `--format` and just this
-You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported-extension)
+## Add
+you have a file with unsopported extension?
+just use `-a` or `--add`
+message will help you to add but I also help you here:
+for just one extenstion you can use `Extenstion:Type`
+and for several extenstion use `Extension1:Type, Extention2:Type2`
+for e.g:
+`psd:adobe photoshop, pdd:adobe photoshop`
+you change the built-in extenstion, like that:
+`png:custome, jpg:cutome`
 
-
-
-
+## Reset
+if you don't want your changed extension or you accidentally broke them,
+No problem, just use `-r` or `--reset` and boom, your types have been reseted❗
 
 # Supported extension
 ```
