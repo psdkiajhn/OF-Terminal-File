@@ -10,8 +10,8 @@ This app can oraganize your file in two was:
 > Python is needed, so install it
 
 > [!TIP]
-> Use sudo when you want to use `-a` or `-r`
-> if you see a sudo error without using any argument, it mean `file_types.json` in `/usr/OF/` is deleted, you must to use sudo to make it again
+> Use sudo when you want to use `-a` or `-r` <br />
+> if you see a sudo error without using any argument, it mean `file_types.json` in `/usr/OF/` is deleted, you must to use sudo to make it again <br />
 
 > [!WARNING]
 > "Please use sudo" 🟰 command need to change something in /usr/ folder and need sudo <br />
