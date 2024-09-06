@@ -1,15 +1,28 @@
 #! /usr/bin/env bash
 
-echo -ne "Welcome to O.F installer\n"
-sudo cp of /usr/local/bin/
-echo -ne '#####                     (33%)\r'
-sleep 1
-sudo mkdir /usr/OF/
-echo -ne '#############             (66%)\r'
-sleep 1
-sudo cp file_types.json /usr/OF/
-sudo exec $SHELL
-echo -ne '#######################   (100%)\r'
-echo -ne '\n'
-echo "Installtion compeleted!"
-echo "Have a nice organiztion :)"
+file_t="./file_types.json"
+file_o="./of"
+
+if command -v python3 &>/dev/null; then
+    if [ -e "$file_o" ] && [ -e "$file_t" ]; then
+        echo -ne "Welcome to O.F installer\n"
+        sudo cp of /usr/local/bin/
+        echo -ne '#####                     (33%)\r'
+        sleep 1
+        sudo mkdir /usr/OF/
+        echo -ne '#############             (66%)\r'
+        sleep 1
+        sudo cp file_types.json /usr/OF/
+        sudo exec $SHELL
+        echo -ne '#######################   (100%)\r'
+        echo -ne '\n'
+        echo "Installtion compeleted!"
+        echo "Have a nice organiztion :)"    
+    else
+        echo "Needed files does not exist."
+    fi    
+else
+    echo "Python is not installed."
+fi
+
+
