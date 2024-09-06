@@ -31,7 +31,7 @@ just install git and run these commands:
 then it's in your terminal, enjoy❗😃
 
 # Usage
-after install, of command will add to your terminal
+after install, of command will add to your terminal <br />
 you can use it with 10 argument or use it single:
 ```
   of -n | of --NO-NEW-FOLDER #*OF will not organize file with no Sorting Folder*
@@ -46,7 +46,7 @@ you can use it with 10 argument or use it single:
   of -e | of --extension #*OF will organize files by extension instead of their types!*
 ```
 ## No New Folder
-This app make a Folder with a type or extension (`using -e or not`) to sort the files, but with this argument OF just sort files with existed folder,
+This app make a Folder with a type or extension (`using -e or not`) to sort the files, but with this argument OF just sort files with existed folder, <br />
 for e.g:
 ```
   before:       |    after:
@@ -55,12 +55,12 @@ for e.g:
   🖼️tset2.jpg   |
   🎥test.mp4    |
 ```
-as you can `.mp4` file didn't organized because video folder doesn't exist❗
-You can use it when you have our own sorted foldee but you add some new file, you can use `-n` or `--NO-NEW-FOLDER` to organize them with your old folder
+as you can `.mp4` file didn't organized because video folder doesn't exist❗ <br />
+You can use it when you have our own sorted foldee but you add some new file, you can use `-n` or `--NO-NEW-FOLDER` to organize them with your old folder <br />
 
 ## Directory
-if you want to organize a directory but your at another directory,
-you don't need to cd for going to that directory, just use `-d` or `--directory` like this:
+if you want to organize a directory but your at another directory, <br />
+you don't need to cd for going to that directory, just use `-d` or `--directory` like this: <br />
 ```
   of -d /usr/myfiles/
       or
@@ -68,17 +68,17 @@ you don't need to cd for going to that directory, just use `-d` or `--directory`
 ```
 
 ## Extension
-if you want to sort your files using extention instead of their type,
-you can use `-e` or `--extension`
-This is an example:
-with -e:
+if you want to sort your files using extention instead of their type, <br />
+you can use `-e` or `--extension` <br />
+This is an example: <br />
+with -e: <br />
 ```
   before:       |    after:
   🖼️test1.png   |    📁png
   🖼️tset2.jpg   |    📁jpg
   🎥test.mp4    |    📁mp4
 ```
-without -e:
+without -e: <br />
 ```
   before:       |    after:
   🖼️test1.png   |    📁image
@@ -87,32 +87,32 @@ without -e:
 ```
 
 ## Format
-you want to see all supported extension❓
-use `-f` or `--format` and just this
-You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported-extension)
+you want to see all supported extension❓ <br />
+use `-f` or `--format` and just this <br />
+You can also see all built-in supported format [here](https://github.com/psdkiajhn/OF-Linux-Terminal-File-Organizer/blob/main/README.md#Supported-extension) <br />
 
 ## Verbose & Quiet
-if you want to know every thing use `-v` or `--verbose`
-and if you want to don't get any thing and just organize use `-q` or `--quiet`
+if you want to know every thing use `-v` or `--verbose` <br />
+and if you want to don't get any thing and just organize use `-q` or `--quiet` <br />
 
 ## Search
-you don't know a extenstion is supported or not❓
-just use `-s` or `--search`, message tell you every thing❗
+you don't know a extenstion is supported or not❓ <br />
+just use `-s` or `--search`, message tell you every thing❗ <br />
 
 ## Add
-you have a file with unsopported extension?
-just use `-a` or `--add`
-message will help you to add but I also help you here:
-for just one extenstion you can use `Extenstion:Type`
-and for several extenstion use `Extension1:Type, Extention2:Type2`
-for e.g:
-`psd:adobe photoshop, pdd:adobe photoshop`
-you change the built-in extenstion, like that:
-`png:custome, jpg:cutome`
+you have a file with unsopported extension? <br />
+just use `-a` or `--add` <br />
+message will help you to add but I also help you here: <br />
+for just one extenstion you can use `Extenstion:Type` <br />
+and for several extenstion use `Extension1:Type, Extention2:Type2` <br />
+for e.g: <br />
+`psd:adobe photoshop, pdd:adobe photoshop` <br />
+you change the built-in extenstion, like that: <br />
+`png:custome, jpg:cutome` <br />
 
 ## Reset
-if you don't want your changed extension or you accidentally broke them,
-No problem, just use `-r` or `--reset` and boom, your types have been reseted❗
+if you don't want your changed extension or you accidentally broke them, <br />
+No problem, just use `-r` or `--reset` and boom, your types have been reseted❗ <br />
 
 # Supported extension
 ```
@@ -236,7 +236,7 @@ No problem, just use `-r` or `--reset` and boom, your types have been reseted❗
 
 # Uninstalltion
 
-just run the uninstall file in app folder like this:
+just run the uninstall file in app folder like this: <br />
 ```
 
   ./uninstall
