@@ -10,6 +10,7 @@ if command -v python3 &>/dev/null; then
         echo -ne '#####                     (33%)\r'
         sleep 1
         sudo mkdir /usr/OF/
+        sudo chmod +x /usr/local/bin/of
         echo -ne '#############             (66%)\r'
         sleep 1
         sudo cp file_types.json /usr/OF/
