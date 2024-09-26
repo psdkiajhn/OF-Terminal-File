@@ -5,7 +5,7 @@ Installtion is so easy, Even a Kid 🧒 can do it! You can see it from [here](ht
 This app can oraganize your file in two was:
 - Sorting by type (Lot's of extension type are built in, but you can add or change them😄)
 - Sorting by extensions <br />
-[Site](https://sl-hapy.github.io/OF-Terminal-File-site/) is update now! check it out
+[Site](http://ofile.root.sx/) is update now! check it out
 
 
 > [!NOTE]
